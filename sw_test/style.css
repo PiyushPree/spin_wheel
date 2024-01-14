@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.wheel {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.wedge {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 50%, 100% 0, 100% 100%);
+    transition: transform 3s ease-in-out;
+    text-align: center;
+    line-height: 200px;
+    font-size: 15px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.wedge span {
+    position: relative;
+    z-index: 0;
+    display: block;
+    transform: rotate(-30deg) translate(70px);
+}
+
+
+.wheel .pointer {
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    background-color: black;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    z-index: 2;
+}
+
+.wedge:nth-child(1) {
+    background-color: rgb(28, 201, 220);
+    transform: rotate(0deg);
+}
+
+.wedge:nth-child(2) {
+    background-color: blue;
+    transform: rotate(60deg);
+}
+
+.wedge:nth-child(3) {
+    background-color: green;
+    transform: rotate(120deg);
+}
+
+.wedge:nth-child(4) {
+    background-color: yellow;
+    transform: rotate(180deg);
+}
+
+.wedge:nth-child(5) {
+    background-color: orange;
+    transform: rotate(240deg);
+}
+
+.wedge:nth-child(6) {
+    background-color: purple;
+    transform: rotate(280deg);
+    /* z-index: -1; */
+}
+
+.form {
+    margin: 20px 20px;
+    padding: 10px 20px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 8px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
